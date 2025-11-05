@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaddleIN Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- INI HEADER & ADA NAVBAR-->
+    <header>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="./logo.png" class="logo-img">
+            </a>
+        </div>
+
+        <!-- Tombol hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+        ☰
+        </div>
+
+        <nav id="nav-menu">
+            <a href="#beranda">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#tentang">Tentang Kami</a>
+        </nav>
+    </header>
+
+    <!-- ini section beranda -->
+    <section id="beranda">
+        <div class="beranda-image">
+            <div class="isi">
+                <h1>Start Your Paddle Journey with Us!</h1>
+                <p>Mulailah pengalaman paddlemu dengan kami!</p>
+            </div>
+        <a href="https://www.figma.com/proto/dQ9uRvcZYW15X2pZNaUHUL/PaddleIN-Project?node-id=8-2146&t=EmscJNrt1mXhuqMO-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="btn">PESAN SEKARANG</a>
+        </div>
+    </section>
+
+    <!-- ini section layanan -->
+    <section id="layanan">
+        <h1>Mengapa website kami?</h1>
+        <!-- pake card untuk keperluan text supaya ga kemana mana -->
+        <div class="card">
+            <img src="./mana.jpg" width ="300" height="150">
+            <div class="isi">
+                <h2>Pesan dimanapun dan kapanpun</h2>
+                <p>Anda bisa melakukan pemesanan lapangan paddle secara daring, dimanapun dan kapanpun!</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./variasi.jpg" width ="300" height="150">
+            <div class="isi">
+                <h2>Tersedia banyak hall paddle di seluruh Jabodetabek</h2>
+                <p>Memesan lapangan dimanapun anda berada khususnya daerah Jabodetabek!</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./pembayaran.jpg" width ="300" height="150">
+            <div class="isi">
+                <h2>Pembayaran yang cepat dan mudah</h2>
+                <p>Pembayaran secara digital, dan metode pembayaran yang bervariasi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ini section tentang -->
+    <section id="tentang">
+        <h1>Tentang Kami</h1>
+        <div>
+            <p>Perusahaan berdiri sejak tahun 2025, Berlokasikan di Jakarta Pusat. Perusahaan ini berfokus kepada komunitas & olahraga. Memiliki visi misi untuk memperkenalkan olahraga Paddle ke masyarakat Indonesia.</p>
+        </div>
+    </section>
+
+    <!-- ini section footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="contact">
+                <img src="./logo.png" width ="100" height="100"><br>
+                Brooklyn, Jakarta Pusat, Jakarta, Indonesia<br>
+                +6287 0000 1111<br>
+                Email: <a href="mailto:paddlein@gmail.com">paddlein@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UMKM Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = navMenu.querySelectorAll('a');
+
+    // Klik tombol burger: buka/tutup menu
+    menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
+    });
+
+    // Klik salah satu link menu: otomatis tutup menu
+    navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.textContent = '☰';
+    });
+    });
+    </script>
+
+</body>
+</html>
